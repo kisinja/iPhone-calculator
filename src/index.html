@@ -6,59 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/b052718160.js" crossorigin="anonymous"></script>
+    <style>
+        @media (max-width:640px) and (min-width:320px) {
+            .content {
+                width: 100%;
+            }
+
+            .buttons {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-black">
-    <h1 class="text-center text-gray-400 my-4 text-3xl font-extrabold">IPhone Calculator</h1>
+<body class="bg-gray-300 font-sans">
 
-    <div class="container flex justify-center">
-        <div class="border p-2 rounded-[10px] bg-black my-5 flex ">
+    <center class="mt-[90px]">
+        <h1 class="text-2xl font-extrabold">IPhone Calculator</h1>
+    </center>
+
+    <div class="container">
+        <div
+            class="bg-black flex flex-col items-center w-[260px] pb-2 mx-auto mt-[100px] rounded-[20px] pt-[15px] content">
             <div>
                 <input type="text" id="display"
-                    class="w-full h-10 text-3xl text-left text-white font-semibold bg-transparent p-1" disabled>
+                    class="w-[230px] h-10 text-[40px] mb-2 text-right text-white font-semibold bg-transparent p-2 placeholder-white"
+                    placeholder="0" disabled>
             </div>
 
-            <div class="grid grid-cols-4 gap-2 mt-2">
-                <button class=" bg-[#a8a8a8] font-semibold text-lg w-10 h-10 rounded-full"
+            <div class="grid grid-cols-4 gap-2 buttons">
+                <button class="font-semibold text-lg w-12 h-12 bg-[#a8a8a8] rounded-full"
                     onclick="clearDisplay()">AC</button>
-                <button class="btn bg-[#a8a8a8] font-semibold text-lg w-10 h-10 rounded-full"
-                    onclick="deleteChar()">DEL</button>
-                <button class="btn bg-[#a8a8a8] font-semibold text-lg w-10 h-10 rounded-full"
-                    onclick="appendChar('%')">%</button>
-                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-lg w-12 h-12 bg-[#a8a8a8] rounded-full"
+                    onclick="clearDisplay()">%</button>
+                <button class="font-semibold text-lg w-12 h-12 bg-[#a8a8a8] rounded-full" onclick="deleteChar()"><i
+                        class="fa-solid fa-delete-left"></i>
+                </button>
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#ffa212]"
                     onclick="appendChar('/')">&divide;</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('7')">7</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('8')">8</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('9')">9</button>
-                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#ffa212]"
                     onclick="appendChar('*')">&times;</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('4')">4</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('5')">5</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('6')">6</button>
-                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#ffa212]"
                     onclick="appendChar('-')">-</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('1')">1</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('2')">2</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
                     onclick="appendChar('3')">3</button>
-                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-10 h-10 rounded-full"
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#ffa212]"
+                    onclick="appendChar('+')">+</button>
+                <button
+                    class="font-semibold text-white text-lg rounded-full text-left pl-5 h-12 bg-[#393939] col-span-2"
+                    onclick="appendChar('0')">0</button>
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#393939]"
+                    onclick="appendChar('.')">.</button>
+                <button class="font-semibold text-white text-lg rounded-full w-12 h-12 bg-[#ffa212]"
+                    onclick="calculate()">=</button>
+            </div>
+
+            <!-- <div class="grid grid-cols-3">
+                <button class=" bg-[#a8a8a8] font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="clearDisplay()">AC</button>
+                <button class="btn bg-[#a8a8a8] font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="deleteChar()">DEL</button>
+                <button class="btn bg-[#a8a8a8] font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('%')">%</button>
+                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('/')">&divide;</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('7')">7</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('8')">8</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('9')">9</button>
+                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('*')">&times;</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('4')">4</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('5')">5</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('6')">6</button>
+                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('-')">-</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('1')">1</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('2')">2</button>
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
+                    onclick="appendChar('3')">3</button>
+                <button class="btn bg-[#ffa212] text-white font-semibold text-lg w-12 h-12 rounded-full"
                     onclick="appendChar('+')">+</button>
                 <button class="btn bg-[#393939] text-white text-lg w-full h-10 rounded-full col-span-2 text-left pl-3"
                     onclick="appendChar('0')">0</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
                     onclick="appendChar('.')">.</button>
-                <button class="btn bg-[#393939] text-white text-lg w-10 h-10 rounded-full"
+                <button class="btn bg-[#393939] text-white text-lg w-12 h-12 rounded-full"
                     onclick="calculate()">=</button>
 
-            </div>
+            </div> -->
         </div>
 
         <script src="calc.js"></script>
