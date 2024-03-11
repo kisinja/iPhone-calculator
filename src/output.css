@@ -582,6 +582,38 @@ video {
   position: absolute;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-\[\] {
+  left: ;
+}
+
+.left-\[50\%\] {
+  left: 50%;
+}
+
+.left-\[40\%\] {
+  left: 40%;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.left-\[37\%\] {
+  left: 37%;
+}
+
+.left-\[38\%\] {
+  left: 38%;
+}
+
+.left-\[39\%\] {
+  left: 39%;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -613,6 +645,10 @@ video {
 
 .mt-\[90px\] {
   margin-top: 90px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -653,6 +689,10 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-3 {
@@ -712,8 +752,17 @@ video {
   background-color: transparent;
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .pb-2 {
@@ -732,8 +781,52 @@ video {
   padding-top: 15px;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
+.pr-\[10px\] {
+  padding-right: 10px;
+}
+
+.pr-\[15px\] {
+  padding-right: 15px;
+}
+
+.pr-\[14px\] {
+  padding-right: 14px;
+}
+
+.pr-\[13px\] {
+  padding-right: 13px;
+}
+
+.pr-\[12px\] {
+  padding-right: 12px;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-left {
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-right {
@@ -758,6 +851,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -769,6 +867,20 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .placeholder-white::-moz-placeholder {
